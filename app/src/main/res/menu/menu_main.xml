@@ -1,0 +1,49 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.darwindeveloper.bchat.MainActivity">
+
+
+    <item
+        android:id="@+id/action_reload"
+        android:icon="@drawable/ic_autorenew"
+        android:orderInCategory="1"
+        android:title="Actualizar Spinner"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_account_search"
+        android:orderInCategory="2"
+        android:title="Buscar Dispositivos"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/action_view"
+        android:icon="@drawable/ic_eye"
+        android:orderInCategory="3"
+        android:title="Hacer visible"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/action_help"
+        android:orderInCategory="4"
+        android:title="Manual de Usuario"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_info"
+        android:orderInCategory="5"
+        android:title="Informacion"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/action_dispositivo"
+        android:orderInCategory="6"
+        android:title="Tu dispositivo"
+        app:showAsAction="never" />
+</menu>

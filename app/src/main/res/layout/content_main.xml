@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.darwindeveloper.nearby.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:backgroundTint="#d2d2d2">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="1"
+        android:stackFromBottom="true" />
+
+    <LinearLayout
+        android:id="@+id/layout_content_write_sms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:layout_margin="1dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="6dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="false"
+            app:contentPadding="0dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="0dp"
+                android:layout_margin="0dp"
+                >
+
+                <LinearLayout
+                    android:padding="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btn_emoji"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_emoticon"
+                        android:layout_gravity="center_vertical" />
+
+                    <ImageButton
+                        android:id="@+id/btn_camera"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_camera"
+                        android:layout_gravity="center_vertical"
+                        android:onClick="pick_photo"/>
+
+                    <ImageButton
+                        android:id="@+id/btn_video"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_video"
+                        android:layout_gravity="center_vertical"
+                        android:onClick="pick_video_record"/>
+
+                    <ImageButton
+                        android:id="@+id/btn_microphone"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_microphone"
+                        android:layout_gravity="center_vertical"
+                        android:onClick="pick_audio_record" />
+
+
+                    <ImageButton
+                        android:id="@+id/btn_photo"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_paperclip"
+                        android:layout_gravity="center_vertical"
+                        android:onClick="pick_file" />
+
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <com.vanniktech.emoji.EmojiEditText
+                        android:layout_weight="1"
+                        android:id="@+id/edit_text_sms"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Ingresa tu mensaje aqui"
+                        android:inputType="text"
+                        android:imeOptions="actionSend"
+                        android:textColor="@android:color/white"/>
+                    <ImageButton
+                        android:id="@+id/btn_send"
+                        android:layout_weight="3.8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:src="@drawable/ic_send"/>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

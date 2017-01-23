@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_mi_dispositivo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.darwindeveloper.nearby.MiDispositivoActivity">
+
+
+    <LinearLayout
+        android:padding="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_weight="0.1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_bluetooth_audio"/>
+
+        <LinearLayout
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TU DISPOSITIVO"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+            <TextView
+                android:gravity="center_horizontal"
+                android:id="@+id/textView_device_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Darwin XT1032"
+                android:textSize="16sp"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:id="@+id/textView_device_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                android:text="a3:34:12:00:00:00"/>
+        </LinearLayout>
+
+        <ImageButton
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_pencil_circle"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:onClick="setName"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="Tus Dispositivos Vinculados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:background="#ef8401"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/dispositivos_vinculados"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

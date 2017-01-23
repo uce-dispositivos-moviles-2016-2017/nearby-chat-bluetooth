@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/popup_action_marcar"
+        android:title="Marcar" />
+
+    <item
+        android:id="@+id/popup_action_eliminar"
+        android:icon="@drawable/ic_delete"
+        android:title="Eliminar" />
+
+    <item
+        android:id="@+id/popup_action_copy_text"
+        android:title="Copiar texto" />
+
+</menu>
