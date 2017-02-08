@@ -80,8 +80,9 @@ import com.darwindeveloper.nearby.extras.Dispositivo;
 import com.darwindeveloper.nearby.extras.SpinnerAdapter;
 import com.getkeepsafe.taptargetview.TapTarget;
 import com.getkeepsafe.taptargetview.TapTargetSequence;
-import com.getkeepsafe.taptargetview.TapTargetView;
 import com.vanniktech.emoji.EmojiEditText;
+import com.vanniktech.emoji.EmojiManager;
+
 import com.vanniktech.emoji.EmojiPopup;
 import com.vanniktech.emoji.emoji.Emoji;
 import com.vanniktech.emoji.listeners.OnEmojiBackspaceClickListener;
@@ -90,8 +91,9 @@ import com.vanniktech.emoji.listeners.OnEmojiPopupDismissListener;
 import com.vanniktech.emoji.listeners.OnEmojiPopupShownListener;
 import com.vanniktech.emoji.listeners.OnSoftKeyboardCloseListener;
 import com.vanniktech.emoji.listeners.OnSoftKeyboardOpenListener;
+import com.vanniktech.emoji.one.EmojiOneProvider;
 
-import org.w3c.dom.Text;
+
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -342,6 +344,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        EmojiManager.install(new EmojiOneProvider());
         is_visible = true;//si la actividad es visible
 
         //preparamos la base de datos
